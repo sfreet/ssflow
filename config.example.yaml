@@ -1,0 +1,26 @@
+# config.example.yaml
+
+# Network interface to capture packets from
+# Linux: e.g., "eth0", "enp0s3", "any"
+# Windows: e.g., "\Device\NPF_{GUID}" or a descriptive name if Npcap supports it.
+# IMPORTANT: Replace with your actual network interface.
+interface: "any" # Example: "eth0" or "enp0s3" on Linux, or a descriptive name on Windows
+
+# BPF filter settings
+bpf:
+  # Source host to filter. Leave empty (" ") to capture from all hosts.
+  # Example: "192.168.1.100"
+  # IMPORTANT: Replace with your desired source host or leave empty.
+  source_host: "" # Example: "192.168.1.100"
+
+# IPFIX collector settings
+collector:
+  host: "127.0.0.1"
+  port: 4739
+
+# Exporter settings
+exporter:
+  # Interval in seconds to export data
+  interval_seconds: 5
+  # Number of events per chunk
+  chunk_size: 20

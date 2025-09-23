@@ -1,0 +1,11 @@
+# Binaries
+ssflow
+ssflow.exe
+ssflow-nocgo
+
+# Log files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
